@@ -1,0 +1,147 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>寻羊启事</title>
+  <style>
+    body {
+      background: #fdfcf9;
+      color: #333;
+      font-family: 'Georgia', serif;
+      max-width: 720px;
+      margin: 4rem auto;
+      padding: 1.5rem;
+      line-height: 1.75;
+      position: relative;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    blockquote {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 4px solid #ccc;
+      color: #666;
+      font-style: italic;
+    }
+    .highlight {
+      background-color: #f4f1e8;
+      padding: 0.5rem;
+      border-left: 4px solid #aaa;
+      margin: 1rem 0;
+    }
+    .contact {
+      font-size: 0.95em;
+      color: #444;
+      background: #f9f8f6;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px dashed #ccc;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85em;
+      color: #999;
+      text-align: center;
+    }
+    .top-right {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    /* 爱心样式 */
+    .heart {
+      position: fixed;
+      width: 16px;
+      height: 16px;
+      background-color: pink;
+      transform: rotate(45deg);
+      pointer-events: none;
+      z-index: 9999;
+      animation: floatDown linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -8px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -8px;
+      top: 0;
+    }
+
+    @keyframes floatDown {
+      0% {
+        transform: rotate(45deg) translateY(-10px);
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(45deg) translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-right">中山大学·深圳·团契<br>公告时间：2025</div>
+
+  <h1>寻羊启事</h1>
+
+  <p>有一只羊，曾与牧人同行。</p>
+  <p>它熟悉青草地和溪水，也曾在幽谷中听过那不离不弃的声音。</p>
+  <p>后来，风大了，路远了，它走散在这喧嚣的人群中。有人说，它不会再回来；但牧人没有放弃。</p>
+
+  <div class="highlight">
+    “祂仍在找，仍在唤。不是高声呼喊，只是轻轻地，在你夜里独醒、在你疑惑沉思时，在你听见风吹向何处的瞬间。”
+  </div>
+
+  <blockquote>“你若在途中听见那声音说：‘这是正路，要行在其间。（赛30:21）’那就是回应的时候。”</blockquote>
+
+  <p>请留下一个记号：一句话、一段声音、一节你记得的章句。</p>
+ 
+  <div class="contact">
+    📩 联系方式：lightinfield<span style="display:none">[防爬虫]</span>@proton<span style="display:none">[防爬虫]</span>.me<br>
+    📌 愿我们在葡萄园边重逢，彼此不再隐藏。
+  </div>
+
+  <footer>
+    若你也曾听过那牧者的声音，也许你知道，有另一只羊正走在回家的路上。
+  </footer>
+
+  <!-- 爱心飘落效果 -->
+  <script>
+    const numHearts = 20;
+
+    for (let i = 0; i < numHearts; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '-' + Math.random() * 20 + 'vh';
+      heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+      heart.style.animationDelay = Math.random() * 5 + 's';
+      heart.style.opacity = Math.random() * 0.8 + 0.2;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
